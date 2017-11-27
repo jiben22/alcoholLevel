@@ -1,5 +1,5 @@
 body {
-    background: url(../../Model/img/wallpaper4.jpg) center 0 no-repeat fixed;
+    background: url(../img/wallpaper4.jpg) center 0 no-repeat fixed;
     background-size: cover;
     color: white;
     font-weight: 600;
@@ -35,7 +35,7 @@ form div:nth-child(1) > input {
 }
 
 form div:nth-child(2) > input {
-    margin-left: 1%; 
+    margin-left: 1%;
 }
 
 #submit {

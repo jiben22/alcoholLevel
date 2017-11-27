@@ -13,4 +13,4 @@ function calcul_taux($nb, $V, $t, $coef, $m){
 $taux = calcul_taux($nb, $volume, $degre, $coeff, $masse);
 $taux = number_format($taux, 2);
 
-header('Location: ../Controller/controller.php?lib=calcul_taux&taux=' . $taux);
+header('Location: ../controller/controller.php?lib=calcul_taux&taux=' . $taux);

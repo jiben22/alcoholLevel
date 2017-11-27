@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <meta name="author" content="Jib LG" />
+        <meta name="author" content="B. Le Gallo" />
         <title>Taux d'alcoolémie</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link rel="icon" type="image/png" href="../Model/img/fav-icon-pinte.png" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/png" href="assets/img/fav-icon-pinte.png" />
+        <link rel="stylesheet" href="assets/css/style.css" />
     </head>
 
     <body>
@@ -24,7 +24,7 @@
             </ul>
         </div>
 
-        <form method="post" action="../Controller/controller.php?lib=form_taux">
+        <form method="post" action="controller/controller.php?lib=form_taux">
             <div>
                 Degré d'alcool (°) <input type="number" size="3" name="degre" required />
                 Volume (cl) <input type="number" size="3" name="volume" required />
@@ -59,7 +59,7 @@
         <div id="infos_calcul">
             <p>
                 La formule pour calculer le temps d'élimination des verres d'alcool est: FAUX
-                où 
+                où
             </p>
             <ul>
                 <li><b></b></li>
@@ -68,7 +68,7 @@
             </ul>
         </div>
 
-        <form method="post" action="../Controller/controller.php?lib=form_elimination">
+        <form method="post" action="controller/controller.php?lib=form_elimination">
             <div>
                 Quantité d'alcool (g) <input type="number" size="3" name="quantite" required />
                 Masse (kg) <input type="number" size="3" name="masse" value="70" required />
@@ -79,7 +79,7 @@
             </div>
             <input id="submit" type="submit" value="Calculer le temps d'élimination" />
         </form>
-        
+
         <?php
         if(isset($_GET['elimination']))
         {

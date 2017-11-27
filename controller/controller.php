@@ -17,18 +17,18 @@ if($_GET['lib'] === 'form_taux')
         {
             $coeff = 0.6;
         }
-        header('Location: ../Model/calcul_taux.php?degre=' . $degre . '&volume=' . $volume . '&nb=' . $nb . '&masse=' . $masse . '&coeff=' . $coeff);
-    } 
+        header('Location: ../model/tauxModel.php?degre=' . $degre . '&volume=' . $volume . '&nb=' . $nb . '&masse=' . $masse . '&coeff=' . $coeff);
+    }
     else
     {
-        header('Location: ../View/taux_alcoolemie.php');
+        header('Location: ../index.php');
     }
 }
 //Redirection du calcul du taux vers la page principale
 elseif($_GET['lib'] === 'calcul_taux')
-{   
+{
     $taux = $_GET['taux'];
-    header('Location: ../View/taux_alcoolemie.php?taux=' . $taux);
+    header('Location: ../index.php?taux=' . $taux);
 }
 //Page principale au calcul de l'élimination (calcul_elimination.php)
 elseif($_GET['lib'] === 'form_elimination')
@@ -36,12 +36,12 @@ elseif($_GET['lib'] === 'form_elimination')
     if(isset($_POST['quantite']))
     {
         $quantite = $_POST['quantite'];
-        header('Location: ../Model/calcul_elimination.php?quantite=' . $quantite . '&sexe=' . $_POST['sexe']);
+        header('Location: ../model/eliminationModel.php?quantite=' . $quantite . '&sexe=' . $_POST['sexe']);
     }
 }
 //Redirection du calcul de l'élimination vers la page principale
 elseif($_GET['lib'] === 'calcul_elimination')
-{   
+{
     $elimination = $_GET['elimination'];
-    header('Location: ../View/taux_alcoolemie.php?elimination=' . $elimination);
+    header('Location: ../index.php?elimination=' . $elimination);
 }
